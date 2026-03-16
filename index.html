@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0"/>
+        <meta charset= "utf-8"><meta/>
+        <title>學習歷程</title>
+        <link rel="stylesheet"type="text/css" href="學習歷程.css">
+    </head>
+    <style>
+        body{
+        margin:0;
+        padding:0;
+    }
+    .subtitle{
+        font-size: 20px;
+        font-weight: bold;
+        color: #000000;
+        transition: 0.3s;
+    }
+    .subtitle:hover{
+        background-color: #717178;
+        color: whitesmoke;
+    }
+    </style>
+    <body>
+        <div style='padding:10px;font-size:28px;font-weight:bold;margin-top:-s5px'>個人特色</div>
+        <div>
+            <span class ="subtitle" onclick="showA()">家庭背景</span>
+            <span class ="subtitle" onclick="showB()">求學生活</span>
+            <span class ="subtitle" onclick="showC()">社團餐與</span>
+        </div>
+        <hr/>
+        <div style="min-height: 100px;margin-left:10px">
+            <div id="showA">家中有父母和姊姊</div>
+            <div id="showB" style="display:none">在學校努力學習</div>
+            <div id="showC" style="display:none">社團擔任公關，有溝通能力</div>
+        </div>     
+     <script>
+        let divElements = document.querySelectorAll('.subtitle');
+        divElements.forEach(function(el) {
+            el.style.marginRight = '-5px';
+            el.style.padding = '10px';
+            el.style.border = '1px solid black';
+            el.style.cursor = 'pointer';
+        });
+        function showA(){
+            let bg = document.querySelector('#showA');
+            let sc = document.querySelector('#showB');
+            let cj = document.querySelector('#showC');
+            bg.style.display = 'block';
+            sc.style.display = 'none';
+            cj.style.display = 'none';
+        }
+        function showB(){
+            let bg = document.querySelector('#showA');
+            let sc = document.querySelector('#showB');
+            let cj = document.querySelector('#showC');
+            bg.style.display = 'none';
+            sc.style.display = 'block';
+            cj.style.display = 'none';
+        }
+        function showC(){
+            let bg = document.querySelector('#showA');
+            let sc = document.querySelector('#showB');
+            let cj = document.querySelector('#showC');
+            bg.style.display = 'none';
+            sc.style.display = 'none'; 
+            cj.style.display = 'block';
+        }
+        </script> 
+        
+        
+    </body>
